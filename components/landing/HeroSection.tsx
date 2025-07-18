@@ -26,7 +26,7 @@ export function HeroSection() {
       opacity: 1,
       transition: {
         duration: 0.6,
-        ease: [0.25, 0.25, 0, 1],
+        ease: [0.25, 0.25, 0, 1] as  [number, number, number, number],
       },
     },
   };
@@ -38,7 +38,7 @@ export function HeroSection() {
       transition: {
         duration: 6,
         repeat: Infinity,
-        ease: "easeInOut",
+        ease: "easeInOut" as const, // ✅ explicitly narrow the type
       },
     },
   };
