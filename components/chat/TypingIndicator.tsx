@@ -15,7 +15,7 @@ export function TypingIndicator() {
     duration: 0.6,
     repeat: Infinity,
     repeatType: 'reverse' as const,
-    ease: 'easeInOut',
+    ease: 'easeInOut' as 'easeInOut', // ✅ explicitly narrow the type
   };
 
   return (
@@ -25,7 +25,7 @@ export function TypingIndicator() {
           <Brain className="w-4 h-4" />
         </AvatarFallback>
       </Avatar>
-      
+
       <Card className="bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700 shadow-md">
         <CardContent className="p-4">
           <div className="flex items-center gap-1">
